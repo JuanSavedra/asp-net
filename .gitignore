@@ -1,0 +1,57 @@
+# Arquivos de sistema operacional
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Cache e configurações do Visual Studio
+.vs/
+*.suo
+*.user
+
+# Pastas de Build (Compilação)
+# Usamos [Oo]bj e [Bb]in para funcionar em sistemas case-sensitive (como Linux)
+[Oo]bj/
+[Bb]in/
+
+# Pastas de publicação (Publish)
+[Rr]elease/
+[Dd]ebug/
+publish/
+
+# Arquivos gerados pelo Build
+*.pdb
+*.dll
+*.exe
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+# IDEs e Ferramentas (Rider, ReSharper, VS Code)
+.idea/
+.vscode/
+*.[Rr]e[Ss]harper
+*.sln.DotSettings.user
+
+# Arquivos de Teste e Logs
+TestResults/
+*.trx
+*.log
+*.clef
+
+# Pacotes e dependências
+packages/
+*.nupkg.metadata
+
+# Se você usar front-end (React, Angular, Vue, etc.)
+node_modules/
+wwwroot/dist/
+wwwroot/lib/
+npm-debug.log
+
+# Configurações locais e segredos (NUNCA ENVIE ISSO)
+# É CRUCIAL ignorar estes arquivos
+appsettings.Development.json
+secrets.json
+*.Secret.json
+.env
