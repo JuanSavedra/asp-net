@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ClientModel>
+
+<h1>Clientes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Email</th>
+            <th>Nascimento</th>
+            <th>Representante</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>
+                    <label>@client.Id</label>
+                </td>
+                <td>
+                    <label>@client.FirstName</label>
+                </td>
+                <td>
+                    <label>@client.LastName</label>
+                </td>
+                <td>
+                    <label>@client.Email</label>
+                </td>
+                <td>
+                    <label>@client.DateOfBirth</label>
+                </td>
+                <td>
+                    <label>Representante Geral</label>
+                </td>
+                <td>
+                    <label>Editar</label>
+                    <label>Consultar</label>
+                    <label>Excluir</label>
+                </td>
+            </tr>     
+        }
+    </tbody>
+</table>
