@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Savedra.Web.Models;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Savedra.Web.Controllers
 {
@@ -17,6 +19,22 @@ namespace Savedra.Web.Controllers
             Console.WriteLine(_clients.Count);
 
             return View(_clients);
+        }
+
+        //Consulta.
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(); //Por padrão retorna o mesmo nome do método.
+        }
+
+        //Recebimento de informação.
+        [HttpPost]
+        public IActionResult Create(ClientModel clientModel)
+        {
+            TempData["successMessage"] = "Cliente cadastrado com sucesso.";
+                
+            return RedirectToAction(nameof(Index)); //Envia de novo ao index.
         }
 
         public static List<ClientModel> GenerateClientsListMock()

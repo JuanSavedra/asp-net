@@ -1,0 +1,53 @@
+﻿@model Savedra.Web.Models.ClientModel
+
+<h1>Cliente</h1>
+<h4>Novo</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form
+            asp-action="Create"
+            asp-controller="Client"
+            method="post"
+        >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label" />
+                <input asp-for="Id" class="form-control" placeholder="ID"/>
+                <span asp-validation-for="Id" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label" />
+                <input asp-for="FirstName" class="form-control" placeholder="Primeiro nome" />
+                <span asp-validation-for="FirstName" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label" />
+                <input asp-for="LastName" class="form-control" placeholder="Segundo nome" />
+                <span asp-validation-for="LastName" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label" />
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label" />
+                <input asp-for="DateOfBirth" class="form-control" placeholder="Data de nascimento" />
+                <span asp-validation-for="DateOfBirth" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="RepresentativeId" class="control-label" />
+                <input asp-for="RepresentativeId" class="form-control" placeholder="ID do representante" />
+                <span asp-validation-for="RepresentativeId" class="text-danger" />
+            </div>
+            <div class="form-group text-secondary">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+        <h4>
+            <a asp-action="Index" asp-controller="Home">Voltar</a>
+        </h4>
+    </div>
+</div>
