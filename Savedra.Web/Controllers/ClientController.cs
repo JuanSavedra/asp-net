@@ -21,20 +21,18 @@ namespace Savedra.Web.Controllers
             return View(_clients);
         }
 
-        //Consulta.
         [HttpGet]
         public IActionResult Create()
         {
-            return View(); //Por padrão retorna o mesmo nome do método.
+            return View();
         }
 
-        //Recebimento de informação.
         [HttpPost]
         public IActionResult Create(ClientModel clientModel)
         {
             TempData["successMessage"] = "Cliente cadastrado com sucesso.";
                 
-            return RedirectToAction(nameof(Index)); //Envia de novo ao index.
+            return RedirectToAction(nameof(Index));
         }
 
         public static List<ClientModel> GenerateClientsListMock()
